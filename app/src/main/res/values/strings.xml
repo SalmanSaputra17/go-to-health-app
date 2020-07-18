@@ -1,0 +1,59 @@
+<resources>
+    <string name="app_name">Sehatin</string>
+    <string name="menu_dashboard1">Kalkulator BMI</string>
+    <string name="menu_dashboard2">Kalkulator Kalori</string>
+    <string name="menu_dashboard3">Denyut Nadi Saya</string>
+    <string name="menu_dashboard4">Pengaturan</string>
+    <string name="submenu_calori1">Kebutuhan kalori per hari Anda</string>
+    <string name="submenu_calori2">Kalori makanan Anda hari ini</string>
+    <string name="txt_berat_badan">Berat Badan(Kg)</string>
+    <string name="txt_tinggi_badan">Tinggi Badan(Cm)</string>
+    <string name="txt_hint_food_calori">Yang Anda makan hari ini</string>
+    <string name="keterangan_card1">Indeks Massa Tubuh Anda:</string>
+    <string name="keterangan_card2">Kebutuhan kalori Anda:</string>
+    <string name="keterangan_card3">Jumlah kalori makanan Anda:</string>
+    <string name="txt_btn_hitung">Hitung</string>
+    <string name="txt_btn_reset">Reset</string>
+    <string name="txt_btn_rekomendasi">Rekomendasi untuk Anda</string>
+    <string name="txt_btn_keluar">Keluar</string>t
+    <string name="txt_btn_simpan">Simpan</string>
+    <string name="faq1">
+        Untuk usia berapa aplikasi ini dapat digunakan?\n\nAplikasi ini dapat digunakan untuk semua kalangan usia 0 tahun ke atas.
+    </string>
+    <string name="faq2">
+        Apa indikator level kegiatan ketika menghitung kebutuhankalori ?\n\nTidak aktif: Tidak berolahraga,\nRingan: 1 - 3x olahraga seminggu,\nSedang: 3 - 5x olahraga seminggu,\nBerat: 5 - 6x olahraga seminggu,\nSangat Berat: 2x olahraga sehari.\n
+    </string>
+    <string name="meta_data">Just Health versi 1.0 @ Copyright 2018</string>
+    <string name="profil_meta_data">Informasi pengguna selengkapnya: </string>
+    <string name="title_activity_profil">ProfilActivity</string>
+    <string name="txt_dnnormal">Denyut Nadi Normal Anda :</string>
+    <string name="txt_dnmax">Denyut Nadi Maksimum Anda :</string>
+    <string name="txt_dnlatihan">Denyut Nadi Zona Latihan Anda :</string>
+    <string name="txt_dnnormal_detail1">
+        <b>Untuk apa denyut nadi ?</b>\n\nDenyut nadi menggambarkan detak jantung Anda, berapa kali jantung berdetak per menitnya. Denyut nadi juga dapat menunjukkan irama jantung dan kekuatan detak jantung Anda. Memantau jumlah denyut nadi Anda saat istirahat, saat berolahraga, atau segera setelah berolahraga dapat menunjukkan tingkat kebugaran Anda.\n\nMemeriksa denyut nadi bahkan dapat membantu Anda menemukan masalah kesehatan yang sedang Anda alami. Misalnya, denyut nadi yang lebih cepat dapat disebabkan oleh anemia, demam, beberapa jenis dari penyakit jantung, atau pemakaian obat-obatan tertentu, seperti dekongestan. Sedangkan, denyut nadi yang lebih lambat dapat menunjukkan penyakit atau obat-obatan yang berhubungan dengan penyakit jantung, seperti obat beta-blockers. Dalam keadaan darurat, denyut nadi juga dapat membantu menunjukkan apakah jantung memompa cukup darah.
+    </string>
+    <string name="txt_dnnormal_detail2">
+        Beberapa hal yang dapat memengaruhi jumlah denyut nadi Anda per menit adalah :\n\n1. <b>Aktivitas fisik</b>\n2. <b>Tingkat kebugaran</b>\n3. <b>Suhu udara</b>\n4. <b>Posisi tubuh</b>(berdiri atau tiduran)\n5. <b>Emosi</b>\n6. <b>Emosi</b>\n6. <b>Ukuran tubuh</b>\n7. <b>Obat-obatan</b>
+    </string>
+    <string name="txt_dnnormal_detail3">
+        <b>Bagaimana cara mengukur denyut nadi ?</b>\n\nDenyut nadi dapat Anda ukur di beberapa titik dalam tubuh Anda, seperti :\n\n1. Pergelangan tangan\n2. Siku bagian dalam\n3. Sisi leher bagian bawah\n\nNamun, biasanya yang paling mudah untuk Anda temukan adalah di pergelangan tangan. Berikut ini merupakan cara mengukur denyut nadi di pergelangan tangan :\n\n<b>Pertama,</b> Tempatkan jari telunjuk dan jari tengah Anda di pergelangan tangan bagian dalam yang dilewati pembuluh darah arteri. Tekan dengan kuat arteri Anda sampai merasakan denyut nadi. (Jika melakukan di siku bagian dalam atau leher, juga tempatkan kedua jari Anda dan tekan sampai menemukan denyut nadi).\n\n<b>Kedua,</b> Hitung denyut nadi Anda selama 60 detik (atau selama 15 detik, lalu kalikan dengan 4 sehingga mendapatkan hasil denyut nadi per menit).\n\n<b>Ketiga,</b> Ingat, saat menghitung, tetaplah fokus pada denyut nadi Anda. Jangan sampai lupa hitungan atau merasa denyut nadi hilang.\n\n<b>Keempat,</b> Anda bisa mengulanginya lagi jika tidak yakin dengan hitungan Anda.
+    </string>
+    <string name="txt_dnmax_detail1">
+        Denyut nadi maksimal(Maximum Heart Rate) merupakan batas kemampuan seseorang untuk melakukan aktifitas secara normal. Itu berarti bila seseorang melakukan suatu aktifitas atau latihan melebihi batas denyut nadi maksimalnya(DNMax) maka segera istirahat, karena berbahaya bagi jantung dan organ tubuh lainnya. Selain itu, bila dipaksakan akan terjadi kram jantung yang dapat menyebabkan serangan jantung.
+    </string>
+    <string name="txt_dnlatihan_detail1">
+        Sebelum Anda memulai latihan usahakan Anda mengukur denyut nadi Anda terlebih dahulu.\n\nSetelah melakukan satu set latihan hitung kembali denyut nadi Anda, apakah sudah masuk denyut nadi latihan atau belum, jika belum berarti Anda harus menambah intensitas latihannya.\n\nDipertengahan latihan usahakan Anda mengukur kembali denyut nadi Anda, apakah sudah masuk denyut nadi latihan atau belum, karena jika belum berarti latihan Anda sia-sia dan Anda hanya mendapat lelah saja. Dan jika melebihi denyut zona latihan maka Anda harus mengurangi intensitas latihan Anda.
+    </string>
+    <string name="txt_card_dn1">
+        <b>Denyut nadi normal dapat diperoleh saat bangun tidur, sebelum anda memulai aktifitas apapun.</b>
+    </string>
+    <string name="txt_card_dn2">
+        <b>Umumnya, denyut nadi yang berada di kisaran paling bawah (60 kali per menit misalnya pada orang dewasa) saat keadaan istirahat menunjukkan bahwa jantung bekerja dengan efisien saat memompa darah dan tubuh Anda lebih bugar.</b>
+    </string>
+    <string name="txt_card_dn3">
+        <b>Perhitungan denyut nadi maksimal ini menggunakan <i>Tanaka Formula</i>.</b>
+    </string>
+    <string name="txt_card_dn4">
+        Denyut nadi pada zona latihan adalah 70 - 85% denyut nadi maksimal.
+    </string>
+</resources>

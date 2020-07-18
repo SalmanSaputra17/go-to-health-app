@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".HeartRateActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/heart_rate_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:titleTextColor="#fff"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="@string/txt_dnnormal"
+            android:textColor="#b4000000"
+            android:textSize="14sp" />
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:clickable="false"
+            app:cardBackgroundColor="#00b956"
+            android:foreground="?android:attr/selectableItemBackground">
+
+            <TextView
+                android:id="@+id/txtdnnormal_result"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:drawableLeft="@drawable/ic_check_circle_black_24dp"
+                android:padding="10dp"
+                android:text=""
+                android:textSize="16sp"
+                android:textColor="#fff"
+                android:textStyle="bold"
+                android:gravity="center"/>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/carddnnormal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:cardBackgroundColor="#fff">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cardinfodn1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:clickable="false"
+                    app:cardBackgroundColor="#ffb41e"
+                    android:foreground="?android:attr/selectableItemBackground">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:drawableLeft="@drawable/ic_info_outline_black_24dp"
+                        android:drawablePadding="10dp"
+                        android:padding="10dp"
+                        android:text="@string/txt_card_dn1"
+                        android:textSize="16sp"
+                        android:textColor="#fff"
+                        android:textStyle="bold"
+                        android:gravity="center_vertical"/>
+
+                </android.support.v7.widget.CardView>
+
+                <TextView
+                    android:id="@+id/txtdnnormal1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:text="@string/txt_dnnormal_detail1"
+                    android:textColor="#313131"
+                    android:textSize="14sp" />
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cardinfodn2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:clickable="false"
+                    app:cardBackgroundColor="#ffb41e"
+                    android:foreground="?android:attr/selectableItemBackground">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:drawableLeft="@drawable/ic_info_outline_black_24dp"
+                        android:drawablePadding="10dp"
+                        android:padding="10dp"
+                        android:text="@string/txt_card_dn2"
+                        android:textSize="16sp"
+                        android:textColor="#fff"
+                        android:textStyle="bold"
+                        android:gravity="center_vertical"/>
+
+                </android.support.v7.widget.CardView>
+
+                <TextView
+                    android:id="@+id/txtdnnormal2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:text="@string/txt_dnnormal_detail2"
+                    android:textColor="#313131"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/txtdnnormal3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:text="@string/txt_dnnormal_detail3"
+                    android:textColor="#313131"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="@string/txt_dnmax"
+            android:textColor="#b4000000"
+            android:textSize="14sp" />
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:clickable="false"
+            app:cardBackgroundColor="#00b956"
+            android:foreground="?android:attr/selectableItemBackground">
+
+            <TextView
+                android:id="@+id/txtdnmax_result"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:drawableLeft="@drawable/ic_check_circle_black_24dp"
+                android:padding="10dp"
+                android:text=""
+                android:textSize="16sp"
+                android:textColor="#fff"
+                android:textStyle="bold"
+                android:gravity="center"/>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/carddnmax"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:cardBackgroundColor="#fff">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txtdnmax1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:text="@string/txt_dnmax_detail1"
+                    android:textColor="#313131"
+                    android:textSize="14sp" />
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cardinfodn3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:clickable="false"
+                    app:cardBackgroundColor="#ffb41e"
+                    android:foreground="?android:attr/selectableItemBackground">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:drawableLeft="@drawable/ic_info_outline_black_24dp"
+                        android:drawablePadding="10dp"
+                        android:padding="10dp"
+                        android:text="@string/txt_card_dn3"
+                        android:textSize="16sp"
+                        android:textColor="#fff"
+                        android:textStyle="bold"
+                        android:gravity="center_vertical"/>
+
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="@string/txt_dnlatihan"
+            android:textColor="#b4000000"
+            android:textSize="14sp" />
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:clickable="false"
+            app:cardBackgroundColor="#00b956"
+            android:foreground="?android:attr/selectableItemBackground">
+
+            <TextView
+                android:id="@+id/txtdnlatihan_result"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:drawableLeft="@drawable/ic_check_circle_black_24dp"
+                android:padding="10dp"
+                android:text=""
+                android:textSize="16sp"
+                android:textColor="#fff"
+                android:textStyle="bold"
+                android:gravity="center"/>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/carddnlatihan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:cardBackgroundColor="#fff">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cardinfodn4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:clickable="false"
+                    app:cardBackgroundColor="#ffb41e"
+                    android:foreground="?android:attr/selectableItemBackground">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:drawableLeft="@drawable/ic_info_outline_black_24dp"
+                        android:drawablePadding="10dp"
+                        android:padding="10dp"
+                        android:text="@string/txt_card_dn4"
+                        android:textSize="16sp"
+                        android:textColor="#fff"
+                        android:textStyle="bold"
+                        android:gravity="center_vertical"/>
+
+                </android.support.v7.widget.CardView>
+
+                <TextView
+                    android:id="@+id/txtdnlatihan1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:text="@string/txt_dnlatihan_detail1"
+                    android:textColor="#313131"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+
+</ScrollView>

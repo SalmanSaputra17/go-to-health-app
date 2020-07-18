@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#fff"
+    tools:context=".DayCaloriActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/day_calori_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:titleTextColor="#fff"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+
+        <EditText
+            android:id="@+id/textberatbadankalori1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_input"
+            android:padding="@dimen/padding_input"
+            android:hint="@string/txt_berat_badan"
+            android:textColorHint="#6b6b6b"
+            android:textColor="#6b6b6b"
+            android:inputType="numberDecimal"
+            android:background="@drawable/bginput"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_below="@id/day_calori_toolbar"/>
+
+        <EditText
+            android:id="@+id/texttinggibadankalori1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_input"
+            android:padding="@dimen/padding_input"
+            android:hint="@string/txt_tinggi_badan"
+            android:textColorHint="#6b6b6b"
+            android:textColor="#6b6b6b"
+            android:inputType="numberDecimal"
+            android:background="@drawable/bginput"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_below="@id/textberatbadankalori1"/>
+
+        <Spinner
+            android:id="@+id/spinnerkegiatan"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_input"
+            android:background="@drawable/style_spinner"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_below="@id/texttinggibadankalori1"/>
+
+        <LinearLayout
+            android:id="@+id/btngroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2"
+            android:orientation="horizontal"
+            android:layout_margin="20dp"
+            android:gravity="center_vertical"
+            android:layout_below="@id/spinnerkegiatan">
+
+            <Button
+                android:id="@+id/btnhitungkalori1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/txt_btn_hitung"
+                android:textColor="#fff"
+                android:textSize="18sp"
+                android:textAllCaps="false"
+                android:background="@drawable/bgbtngradient"/>
+
+            <Button
+                android:id="@+id/btnresetdaykalori"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/txt_btn_reset"
+                android:textColor="#000"
+                android:textSize="18sp"
+                android:textAllCaps="false"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/bgbtnwhite"/>
+
+        </LinearLayout>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardresultkalori1"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            app:cardCornerRadius="8dp"
+            android:layout_below="@id/btngroup">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="15dp">
+
+                <TextView
+                    android:id="@+id/textjudul"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/keterangan_card2"
+                    android:textAllCaps="true"
+                    android:textColor="#b4000000"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/textresultkalori1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000"
+                    android:textSize="46sp" />
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+    </RelativeLayout>
+
+</ScrollView>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <AutoCompleteTextView
+        android:id="@+id/txtadd"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_input"
+        android:padding="@dimen/padding_input"
+        android:hint="@string/txt_hint_food_calori"
+        android:textColorHint="#6b6b6b"
+        android:textColor="#6b6b6b"
+        android:inputType="text"
+        android:background="@drawable/bginput"
+        android:layout_marginTop="8dp"/>
+
+</LinearLayout>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:fillViewport="true"
+    tools:context=".FAQsActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:divider="@drawable/separator"
+        android:showDividers="middle">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/faqs_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:titleTextColor="#fff"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+
+        <com.borjabravo.readmoretextview.ReadMoreTextView
+            android:id="@+id/faq1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="@string/faq1"
+            android:textColor="#000"
+            android:textSize="16sp"
+            app:trimExpandedText="Show More"
+            app:trimCollapsedText="Show Less"
+            app:trimMode="trimModeLength"
+            app:trimLength="48"
+            app:colorClickableText="@color/colorPrimaryDark"/>
+
+        <com.borjabravo.readmoretextview.ReadMoreTextView
+            android:id="@+id/faq2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="@string/faq2"
+            android:textColor="#000"
+            android:textSize="16sp"
+            app:trimExpandedText="Show More"
+            app:trimCollapsedText="Show Less"
+            app:trimMode="trimModeLength"
+            app:trimLength="64"
+            app:colorClickableText="@color/colorPrimaryDark"/>
+
+    </LinearLayout>
+
+</ScrollView>
