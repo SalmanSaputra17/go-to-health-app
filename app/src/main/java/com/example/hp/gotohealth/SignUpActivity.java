@@ -25,7 +25,7 @@ import java.util.Calendar;
 import java.util.List;
 import java.util.Locale;
 
-public class SignupActivity extends AppCompatActivity {
+public class SignUpActivity extends AppCompatActivity {
 
     final Calendar myCalendar = Calendar.getInstance();
 
@@ -116,7 +116,7 @@ public class SignupActivity extends AppCompatActivity {
         dateOfBirth.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                new DatePickerDialog(SignupActivity.this, date, myCalendar
+                new DatePickerDialog(SignUpActivity.this, date, myCalendar
                         .get(Calendar.YEAR), myCalendar.get(Calendar.MONTH), myCalendar.get(Calendar.DAY_OF_MONTH))
                         .show();
             }

@@ -17,17 +17,17 @@
         android:roundIcon="@drawable/logo1"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.example.hp.gotohealth.SigninActivity" />
-        <activity android:name="com.example.hp.gotohealth.SignupActivity" />
-        <!-- The main/home activity (it has no parent activity) -->
         <activity
-            android:name="com.example.hp.gotohealth.DashboardActivity"
+            android:name="com.example.hp.gotohealth.SignInActivity"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name="com.example.hp.gotohealth.SignUpActivity" />
+        <!-- The main/home activity (it has no parent activity) -->
+        <activity android:name="com.example.hp.gotohealth.DashboardActivity"/>
         <!-- A child of the main activity -->
         <activity android:name="com.example.hp.gotohealth.CalculateIBMActivity" />
         <activity android:name="com.example.hp.gotohealth.CalorieActivity" />

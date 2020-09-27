@@ -10,9 +10,14 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.hp.gotohealth.Common.Common;
+import com.example.hp.gotohealth.Model.APIResponse;
 import com.example.hp.gotohealth.Retrofit.APIService;
 
-public class SigninActivity extends AppCompatActivity {
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+
+public class SignInActivity extends AppCompatActivity {
 
     EditText email, password;
     Button btnSignIn;
@@ -46,25 +51,25 @@ public class SigninActivity extends AppCompatActivity {
         btnSignIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                authenticateUser(email.getText().toString(), password.getText().toString());
+                authenticateUser(email.getText().toString(), password.getText().toString(), true);
             }
         });
 
         txtSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                toSignUp = new Intent(SigninActivity.this, SignupActivity.class);
+                toSignUp = new Intent(SignInActivity.this, SignUpActivity.class);
                 startActivity(toSignUp);
             }
         });
 
         if (sharePrefManager.getSpHasLogin()) {
-
+            // get user data if user has signin
         }
 
     }
 
-    private void authenticateUser(String email, String password) {
+    private void authenticateUser(String email, String password, boolean rememberMe) {
 
     }
 

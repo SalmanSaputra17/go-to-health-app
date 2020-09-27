@@ -81,7 +81,7 @@ public class DashboardActivity extends AppCompatActivity {
                         sharePrefManager.saveSPString(SharePrefManager.SP_EMAIL, "");
                         sharePrefManager.saveSPBoolean(SharePrefManager.SP_HAS_LOGIN, false);
 
-                        startActivity(new Intent(getApplicationContext(), SigninActivity.class)
+                        startActivity(new Intent(getApplicationContext(), SignInActivity.class)
                                 .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK));
                         finish();
                     }

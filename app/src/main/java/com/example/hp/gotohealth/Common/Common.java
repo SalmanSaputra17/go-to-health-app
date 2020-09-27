@@ -6,7 +6,7 @@ import com.example.hp.gotohealth.Retrofit.RetrofitClient;
 
 public class Common {
 
-    public static final String BASE_URL = "http://localhost:8000";
+    public static final String BASE_URL = "http://localhost:8000/api/";
 
     public static User currentUser = null;
 
