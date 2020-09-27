@@ -29,7 +29,7 @@ public class SignupActivity extends AppCompatActivity {
 
     final Calendar myCalendar = Calendar.getInstance();
 
-    EditText username, dateOfBirth, email, password;
+    EditText username, dateOfBirth, email, password, confirmPassword;
     Spinner gender;
     Button btnSignUp;
     TextView txtSignIn;
@@ -53,15 +53,16 @@ public class SignupActivity extends AppCompatActivity {
         dateOfBirth = (EditText) findViewById(R.id.texttglsignup);
         email = (EditText) findViewById(R.id.textemailsignup);
         password = (EditText) findViewById(R.id.textpasswordsignup);
+        confirmPassword = (EditText) findViewById(R.id.textconfirmpasswordsignup);
         btnSignUp = (Button) findViewById(R.id.btnsignup);
         txtSignIn = (TextView) findViewById(R.id.textsignin);
 
         // gender adapter
-        String[] jkString = new String[]{"Jenis Kelamin", "Laki-laki", "Perempuan"};
+        String[] genderString = new String[]{"Jenis Kelamin", "Laki-laki", "Perempuan"};
 
-        final List<String> jkList = new ArrayList<>(Arrays.asList(jkString));
+        final List<String> genderList = new ArrayList<>(Arrays.asList(genderString));
 
-        final ArrayAdapter<String> spinnerArrayAdapter = new ArrayAdapter<String>(this, R.layout.spinner_item_black, jkList) {
+        final ArrayAdapter<String> spinnerArrayAdapter = new ArrayAdapter<String>(this, R.layout.spinner_item_black, genderList) {
             @Override
             public boolean isEnabled(int position) {
                 if (position == 0) {
@@ -132,13 +133,13 @@ public class SignupActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 createNewUser(username.getText().toString(), stringGender, dateOfBirth.getText().toString(),
-                        email.getText().toString(), password.getText().toString());
+                        email.getText().toString(), password.getText().toString(), confirmPassword.getText().toString());
             }
         });
 
     }
 
-    private void createNewUser(String username, String gender, String dateOfBirth, String email, String password) {
+    private void createNewUser(String username, String gender, String dateOfBirth, String email, String password, String confirmPassword) {
 
     }
 
