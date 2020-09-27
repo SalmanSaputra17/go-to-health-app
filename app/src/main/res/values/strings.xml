@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">GoToHealth</string>
+    <string name="app_name">Go To Health</string>
     <string name="menu_dashboard1">Kalkulator BMI</string>
     <string name="menu_dashboard2">Kalkulator Kalori</string>
     <string name="menu_dashboard3">Denyut Nadi Saya</string>

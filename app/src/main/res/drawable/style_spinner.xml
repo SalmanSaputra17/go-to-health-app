@@ -8,10 +8,6 @@
                     <solid android:color="#ececec" />
                 </shape>
             </item>
-
-            <item>
-                <bitmap android:gravity="right" android:src="@mipmap/icon_jk" />
-            </item>
         </layer-list>
     </item>
 
