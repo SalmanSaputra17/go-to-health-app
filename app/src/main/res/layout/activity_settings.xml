@@ -16,63 +16,63 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorPrimary"
-            app:titleTextColor="#fff"
             android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
-            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:titleTextColor="#fff" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
+            android:layout_below="@id/setting_toolbar"
             android:background="#fff"
             android:divider="@drawable/separator"
-            android:showDividers="middle"
-            android:layout_below="@id/setting_toolbar">
+            android:orientation="vertical"
+            android:showDividers="middle">
 
             <TextView
                 android:id="@+id/txtprofil"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="?android:selectableItemBackground"
+                android:clickable="true"
+                android:padding="18dp"
                 android:text="Profil"
                 android:textColor="#000"
-                android:textSize="18sp"
-                android:padding="18dp"
-                android:clickable="true"
-                android:background="?android:selectableItemBackground"/>
+                android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/txtfaq"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="?android:selectableItemBackground"
+                android:clickable="true"
+                android:padding="18dp"
                 android:text="FAQs"
                 android:textColor="#000"
-                android:textSize="18sp"
-                android:padding="18dp"
-                android:clickable="true"
-                android:background="?android:selectableItemBackground"/>
+                android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/txthapusakun"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="?android:selectableItemBackground"
+                android:clickable="true"
+                android:padding="18dp"
                 android:text="Hapus akun saya"
                 android:textColor="#f93333"
-                android:textSize="18sp"
-                android:padding="18dp"
-                android:clickable="true"
-                android:background="?android:selectableItemBackground"/>
+                android:textSize="18sp" />
 
         </LinearLayout>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/meta_data"
+            android:layout_alignParentBottom="true"
             android:background="#fff"
-            android:textColor="#000"
-            android:padding="10dp"
             android:gravity="center_horizontal"
-            android:layout_alignParentBottom="true"/>
+            android:padding="10dp"
+            android:text="@string/meta_data"
+            android:textColor="#000" />
 
     </RelativeLayout>
 

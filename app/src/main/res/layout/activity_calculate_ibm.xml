@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#fff"
     android:fillViewport="true"
-    tools:context=".CheckBBActivity">
+    tools:context=".CalculateIBMActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -17,72 +17,72 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorPrimary"
-            app:titleTextColor="#fff"
             android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
-            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:titleTextColor="#fff" />
 
         <EditText
             android:id="@+id/textberatbadan"
             android:layout_width="match_parent"
             android:layout_height="@dimen/height_input"
-            android:padding="@dimen/padding_input"
-            android:hint="@string/txt_berat_badan"
-            android:textColorHint="#6b6b6b"
-            android:textColor="#6b6b6b"
-            android:inputType="numberDecimal"
-            android:background="@drawable/bginput"
-            android:layout_marginTop="20dp"
+            android:layout_below="@id/check_bb_toolbar"
             android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
             android:layout_marginRight="20dp"
-            android:layout_below="@id/check_bb_toolbar"/>
+            android:background="@drawable/bginput"
+            android:hint="@string/txt_berat_badan"
+            android:inputType="numberDecimal"
+            android:padding="@dimen/padding_input"
+            android:textColor="#6b6b6b"
+            android:textColorHint="#6b6b6b" />
 
         <EditText
             android:id="@+id/texttinggibadan"
             android:layout_width="match_parent"
             android:layout_height="@dimen/height_input"
-            android:padding="@dimen/padding_input"
-            android:hint="@string/txt_tinggi_badan"
-            android:textColorHint="#6b6b6b"
-            android:textColor="#6b6b6b"
-            android:inputType="numberDecimal"
-            android:background="@drawable/bginput"
-            android:layout_marginTop="8dp"
+            android:layout_below="@id/textberatbadan"
             android:layout_marginLeft="20dp"
+            android:layout_marginTop="8dp"
             android:layout_marginRight="20dp"
-            android:layout_below="@id/textberatbadan"/>
+            android:background="@drawable/bginput"
+            android:hint="@string/txt_tinggi_badan"
+            android:inputType="numberDecimal"
+            android:padding="@dimen/padding_input"
+            android:textColor="#6b6b6b"
+            android:textColorHint="#6b6b6b" />
 
         <LinearLayout
             android:id="@+id/btngroup"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:weightSum="2"
-            android:orientation="horizontal"
+            android:layout_below="@id/texttinggibadan"
             android:layout_margin="20dp"
             android:gravity="center_vertical"
-            android:layout_below="@id/texttinggibadan">
+            android:orientation="horizontal"
+            android:weightSum="2">
 
             <Button
                 android:id="@+id/btnhitungbb"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:background="@drawable/bgbtngradient"
                 android:text="@string/txt_btn_hitung"
-                android:textColor="#fff"
-                android:textSize="18sp"
                 android:textAllCaps="false"
-                android:background="@drawable/bgbtngradient"/>
+                android:textColor="#fff"
+                android:textSize="18sp" />
 
             <Button
                 android:id="@+id/btnresetbb"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/txt_btn_reset"
-                android:textColor="#000"
-                android:textSize="18sp"
-                android:textAllCaps="false"
                 android:layout_marginLeft="5dp"
-                android:background="@drawable/bgbtnwhite"/>
+                android:layout_weight="1"
+                android:background="@drawable/bgbtnwhite"
+                android:text="@string/txt_btn_reset"
+                android:textAllCaps="false"
+                android:textColor="#000"
+                android:textSize="18sp" />
 
         </LinearLayout>
 
@@ -90,18 +90,18 @@
             android:id="@+id/cardresult"
             android:layout_width="match_parent"
             android:layout_height="200dp"
+            android:layout_below="@id/btngroup"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:layout_marginBottom="20dp"
-            app:cardCornerRadius="8dp"
-            android:layout_below="@id/btngroup">
+            app:cardCornerRadius="8dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:gravity="center"
                 android:orientation="vertical"
-                android:padding="15dp"
-                android:gravity="center">
+                android:padding="15dp">
 
                 <TextView
                     android:id="@+id/textjudul"
@@ -109,36 +109,36 @@
                     android:layout_height="wrap_content"
                     android:text="@string/keterangan_card1"
                     android:textAllCaps="true"
-                    android:textSize="16sp"
-                    android:textColor="#b4000000"/>
+                    android:textColor="#b4000000"
+                    android:textSize="16sp" />
 
                 <TextView
                     android:id="@+id/textresult"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="46sp"
-                    android:textColor="#000"/>
+                    android:textColor="#000"
+                    android:textSize="46sp" />
 
                 <TextView
                     android:id="@+id/textketerangan"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAllCaps="true"
-                    android:textSize="24sp"
                     android:textColor="#9b3eff"
-                    android:textStyle="bold"/>
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
 
                 <!--<Button-->
-                    <!--android:id="@+id/btnrekomendasi"-->
-                    <!--android:layout_width="wrap_content"-->
-                    <!--android:layout_height="30dp"-->
-                    <!--android:background="@drawable/bgbtn"-->
-                    <!--android:text="@string/txt_btn_rekomendasi"-->
-                    <!--android:textColor="#fff"-->
-                    <!--android:textSize="11sp"-->
-                    <!--android:paddingLeft="10dp"-->
-                    <!--android:paddingRight="10dp"-->
-                    <!--android:layout_marginTop="5dp"/>-->
+                <!--android:id="@+id/btnrekomendasi"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="30dp"-->
+                <!--android:background="@drawable/bgbtn"-->
+                <!--android:text="@string/txt_btn_rekomendasi"-->
+                <!--android:textColor="#fff"-->
+                <!--android:textSize="11sp"-->
+                <!--android:paddingLeft="10dp"-->
+                <!--android:paddingRight="10dp"-->
+                <!--android:layout_marginTop="5dp"/>-->
 
             </LinearLayout>
 

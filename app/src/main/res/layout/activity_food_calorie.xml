@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#fff"
     android:fillViewport="true"
-    tools:context=".FoodCaloriActivity">
+    tools:context=".FoodCalorieActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -17,78 +17,77 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorPrimary"
-            app:titleTextColor="#fff"
             android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
-            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:titleTextColor="#fff" />
 
         <AutoCompleteTextView
             android:id="@+id/txtmakanan1"
             android:layout_width="match_parent"
             android:layout_height="@dimen/height_input"
-            android:padding="@dimen/padding_input"
-            android:hint="@string/txt_hint_food_calori"
-            android:textColorHint="#6b6b6b"
-            android:textColor="#6b6b6b"
-            android:inputType="text"
-            android:background="@drawable/bginput"
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
             android:layout_below="@id/food_calori_toolbar"
-            />
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/bginput"
+            android:hint="@string/txt_hint_food_kalori"
+            android:inputType="text"
+            android:padding="@dimen/padding_input"
+            android:textColor="#6b6b6b"
+            android:textColorHint="#6b6b6b" />
 
         <LinearLayout
             android:id="@+id/container"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
+            android:layout_below="@id/txtmakanan1"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
-            android:layout_below="@id/txtmakanan1"></LinearLayout>
+            android:orientation="vertical" />
 
         <LinearLayout
             android:id="@+id/btngroup"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:weightSum="2"
-            android:orientation="horizontal"
+            android:layout_below="@id/container"
             android:layout_margin="20dp"
             android:gravity="center_vertical"
-            android:layout_below="@id/container">
+            android:orientation="horizontal"
+            android:weightSum="2">
 
             <Button
                 android:id="@+id/btnhitungkalori2"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:background="@drawable/bgbtngradient"
                 android:text="@string/txt_btn_hitung"
-                android:textColor="#fff"
-                android:textSize="18sp"
                 android:textAllCaps="false"
-                android:background="@drawable/bgbtngradient"/>
+                android:textColor="#fff"
+                android:textSize="18sp" />
 
             <Button
                 android:id="@+id/btnresetfoodkalori"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/txt_btn_reset"
-                android:textColor="#000"
-                android:textSize="18sp"
-                android:textAllCaps="false"
                 android:layout_marginLeft="5dp"
-                android:background="@drawable/bgbtnwhite"/>
+                android:layout_weight="1"
+                android:background="@drawable/bgbtnwhite"
+                android:text="@string/txt_btn_reset"
+                android:textAllCaps="false"
+                android:textColor="#000"
+                android:textSize="18sp" />
 
             <Button
                 android:id="@+id/add"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:text="+"
-                android:textSize="24sp"
-                android:textColor="#fff"
-                android:padding="5dp"
                 android:layout_marginLeft="5dp"
-                android:background="@drawable/bgbtncircle"/>
+                android:background="@drawable/bgbtncircle"
+                android:padding="5dp"
+                android:text="+"
+                android:textColor="#fff"
+                android:textSize="24sp" />
 
         </LinearLayout>
 
@@ -96,18 +95,18 @@
             android:id="@+id/cardresultkalori2"
             android:layout_width="match_parent"
             android:layout_height="200dp"
+            android:layout_below="@id/btngroup"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:layout_marginBottom="20dp"
-            app:cardCornerRadius="8dp"
-            android:layout_below="@id/btngroup">
+            app:cardCornerRadius="8dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:gravity="center"
                 android:orientation="vertical"
-                android:padding="15dp"
-                android:gravity="center">
+                android:padding="15dp">
 
                 <TextView
                     android:id="@+id/textjudul"
@@ -115,15 +114,15 @@
                     android:layout_height="wrap_content"
                     android:text="@string/keterangan_card3"
                     android:textAllCaps="true"
-                    android:textSize="16sp"
-                    android:textColor="#b4000000"/>
+                    android:textColor="#b4000000"
+                    android:textSize="16sp" />
 
                 <TextView
                     android:id="@+id/textresultkalori2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="46sp"
-                    android:textColor="#000"/>
+                    android:textColor="#000"
+                    android:textSize="46sp" />
 
             </LinearLayout>
 

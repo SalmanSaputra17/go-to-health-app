@@ -1,21 +1,21 @@
 <resources>
-    <string name="app_name">Sehatin</string>
+    <string name="app_name">GoToHealth</string>
     <string name="menu_dashboard1">Kalkulator BMI</string>
     <string name="menu_dashboard2">Kalkulator Kalori</string>
     <string name="menu_dashboard3">Denyut Nadi Saya</string>
     <string name="menu_dashboard4">Pengaturan</string>
-    <string name="submenu_calori1">Kebutuhan kalori per hari Anda</string>
-    <string name="submenu_calori2">Kalori makanan Anda hari ini</string>
+    <string name="submenu_kalori1">Kebutuhan kalori per hari Anda</string>
+    <string name="submenu_kalori2">Kalori makanan Anda hari ini</string>
     <string name="txt_berat_badan">Berat Badan(Kg)</string>
     <string name="txt_tinggi_badan">Tinggi Badan(Cm)</string>
-    <string name="txt_hint_food_calori">Yang Anda makan hari ini</string>
+    <string name="txt_hint_food_kalori">Yang Anda makan hari ini</string>
     <string name="keterangan_card1">Indeks Massa Tubuh Anda:</string>
     <string name="keterangan_card2">Kebutuhan kalori Anda:</string>
     <string name="keterangan_card3">Jumlah kalori makanan Anda:</string>
     <string name="txt_btn_hitung">Hitung</string>
     <string name="txt_btn_reset">Reset</string>
     <string name="txt_btn_rekomendasi">Rekomendasi untuk Anda</string>
-    <string name="txt_btn_keluar">Keluar</string>t
+    <string name="txt_btn_keluar">Keluar</string>
     <string name="txt_btn_simpan">Simpan</string>
     <string name="faq1">
         Untuk usia berapa aplikasi ini dapat digunakan?\n\nAplikasi ini dapat digunakan untuk semua kalangan usia 0 tahun ke atas.

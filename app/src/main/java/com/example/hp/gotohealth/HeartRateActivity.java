@@ -1,25 +1,22 @@
-package com.example.hp.justhealth;
+package com.example.hp.gotohealth;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
 
-import com.example.hp.justhealth.Common.Common;
-import com.example.hp.justhealth.Retrofit.IMyAPI;
+import com.example.hp.gotohealth.Common.Common;
+import com.example.hp.gotohealth.Retrofit.APIService;
 
 public class HeartRateActivity extends AppCompatActivity {
 
     Toolbar toolbar;
-    TextView txtDNNormal, txtDNMax, txtDNLatihan;
-    IMyAPI mService;
+    TextView txtNormalHeartRate, txtMaxHeartRate, txtExerciseHeartRate;
+    APIService apiService;
 
-    String dn_normal, dn_latihan;
-    double dn_max;
+    double normalHeartRate, maxHeartRate, exerciseHeartRate;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,13 +24,13 @@ public class HeartRateActivity extends AppCompatActivity {
         setContentView(R.layout.activity_heart_rate);
 
         // init API
-        mService = Common.getAPI();
+        apiService = Common.getAPI();
 
         // init views
         toolbar = (Toolbar) findViewById(R.id.heart_rate_toolbar);
-        txtDNNormal = (TextView) findViewById(R.id.txtdnnormal_result);
-        txtDNMax = (TextView) findViewById(R.id.txtdnmax_result);
-        txtDNLatihan = (TextView) findViewById(R.id.txtdnlatihan_result);
+        txtNormalHeartRate = (TextView) findViewById(R.id.txtdnnormal_result);
+        txtMaxHeartRate = (TextView) findViewById(R.id.txtdnmax_result);
+        txtExerciseHeartRate = (TextView) findViewById(R.id.txtdnlatihan_result);
 
         toolbar.setTitle("Denyut Nadi Anda");
         toolbar.setNavigationIcon(R.drawable.ic_arrow_back_white);
@@ -45,14 +42,14 @@ public class HeartRateActivity extends AppCompatActivity {
 
         // get intent data
         Intent intent = this.getIntent();
-        dn_normal = intent.getStringExtra("dn_normal");
-        dn_max = intent.getDoubleExtra("dn_max", 0.00);
-        dn_latihan = intent.getStringExtra("dn_latihan");
+        normalHeartRate = intent.getDoubleExtra("normalHeartRate", 0.00);
+        maxHeartRate = intent.getDoubleExtra("maxHeartRate", 0.00);
+        exerciseHeartRate = intent.getDoubleExtra("exerciseHeartRate", 0.00);
 
         // set TextView
-        txtDNNormal.setText(dn_normal);
-        txtDNMax.setText(String.valueOf(dn_max) + " bpm");
-        txtDNLatihan.setText(dn_latihan);
+        txtNormalHeartRate.setText(String.valueOf(normalHeartRate) + " bpm");
+        txtMaxHeartRate.setText(String.valueOf(maxHeartRate) + " bpm");
+        txtExerciseHeartRate.setText(String.valueOf(exerciseHeartRate) + " bpm");
 
     }
 

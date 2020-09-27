@@ -1,4 +1,4 @@
-package com.example.hp.justhealth;
+package com.example.hp.gotohealth;
 
 import android.content.Context;
 import android.content.SharedPreferences;

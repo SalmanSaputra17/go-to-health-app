@@ -1,10 +1,9 @@
-package com.example.hp.justhealth;
+package com.example.hp.gotohealth;
 
 import android.content.Context;
-import android.graphics.Color;
+import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
@@ -18,33 +17,23 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.balysv.materialmenu.MaterialMenu;
-import com.balysv.materialmenu.MaterialMenuDrawable;
-import com.example.hp.justhealth.Common.Common;
-import com.example.hp.justhealth.Model.APIResponse;
-import com.example.hp.justhealth.Retrofit.IMyAPI;
+import com.example.hp.gotohealth.Common.Common;
+import com.example.hp.gotohealth.Retrofit.APIService;
 
-import java.sql.Array;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Random;
 
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
-
-public class FoodCaloriActivity extends AppCompatActivity {
+public class FoodCalorieActivity extends AppCompatActivity {
 
     Animation fade;
 
     Toolbar toolbar;
     LinearLayout container;
-    Button btnHitung, btnAdd, btnReset;
+    Button btnCalculate, btnAdd, btnReset;
     CardView cardResult;
     TextView txtResult;
-    AutoCompleteTextView txtMakanan1, txtAdd;
+    AutoCompleteTextView txtFoodFirst, txtAdd;
 
-    IMyAPI mService;
+    APIService apiService;
     ArrayList<String> inputFoods = new ArrayList<>();
 
     int sum, sdk = android.os.Build.VERSION.SDK_INT;
@@ -52,22 +41,22 @@ public class FoodCaloriActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_food_calori);
+        setContentView(R.layout.activity_food_calorie);
 
         // init API
-        mService = Common.getAPI();
+        apiService = Common.getAPI();
 
         // init views
         fade = AnimationUtils.loadAnimation(this, R.anim.fade);
 
         toolbar = (Toolbar) findViewById(R.id.food_calori_toolbar);
         container = (LinearLayout) findViewById(R.id.container);
-        btnHitung = (Button) findViewById(R.id.btnhitungkalori2);
+        btnCalculate = (Button) findViewById(R.id.btnhitungkalori2);
         btnAdd = (Button) findViewById(R.id.add);
         btnReset = (Button) findViewById(R.id.btnresetfoodkalori);
         cardResult = (CardView) findViewById(R.id.cardresultkalori2);
         txtResult = (TextView) findViewById(R.id.textresultkalori2);
-        txtMakanan1 = (AutoCompleteTextView) findViewById(R.id.txtmakanan1);
+        txtFoodFirst = (AutoCompleteTextView) findViewById(R.id.txtmakanan1);
 
         toolbar.setTitle("Jumlah Kalori Makanan");
         toolbar.setNavigationIcon(R.drawable.ic_arrow_back_white);
@@ -91,25 +80,25 @@ public class FoodCaloriActivity extends AppCompatActivity {
             }
         });
 
-        btnHitung.setOnClickListener(new View.OnClickListener() {
+        btnCalculate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 insertAllFoods();
                 if (inputFoods.size() > 0) {
                     getTotal(inputFoods);
-                    btnHitung.setEnabled(false);
+                    btnCalculate.setEnabled(false);
                     btnAdd.setEnabled(false);
 
-                    if(sdk < android.os.Build.VERSION_CODES.JELLY_BEAN) {
-                        btnHitung.setBackgroundDrawable(ContextCompat.getDrawable(getApplicationContext(), R.drawable.bgbtndisabled));
+                    if (sdk < android.os.Build.VERSION_CODES.JELLY_BEAN) {
+                        btnCalculate.setBackgroundDrawable(ContextCompat.getDrawable(getApplicationContext(), R.drawable.bgbtndisabled));
                         btnAdd.setBackgroundDrawable(ContextCompat.getDrawable(getApplicationContext(), R.drawable.bgbtndisabled));
                     } else {
-                        btnHitung.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.bgbtndisabled));
+                        btnCalculate.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.bgbtndisabled));
                         btnAdd.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.bgbtndisabled));
                     }
 
                 } else {
-                    Toast.makeText(FoodCaloriActivity.this, "Please complete all the fields !", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(FoodCalorieActivity.this, "Please complete all the fields !", Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -118,7 +107,7 @@ public class FoodCaloriActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 reset();
-                btnHitung.setEnabled(true);
+                btnCalculate.setEnabled(true);
                 btnAdd.setEnabled(true);
             }
         });
@@ -126,12 +115,14 @@ public class FoodCaloriActivity extends AppCompatActivity {
     }
 
     private void insertAllFoods() {
-        String txtMakanan1Values = txtMakanan1.getText().toString().toLowerCase();
+        String txtMakanan1Values = txtFoodFirst.getText().toString().toLowerCase();
+
         if (!txtMakanan1Values.isEmpty()) {
             inputFoods.add(txtMakanan1Values);
         }
 
         int childCount = container.getChildCount();
+
         for (int i = 0; i < childCount; i++) {
             View thisChild = container.getChildAt(i);
             AutoCompleteTextView txtAdd = (AutoCompleteTextView) thisChild.findViewById(R.id.txtadd);
@@ -144,40 +135,12 @@ public class FoodCaloriActivity extends AppCompatActivity {
     }
 
     private void getTotal(final ArrayList<String> inputFoods) {
-        final int arrSize = inputFoods.size();
-        for (int i = 0; i < arrSize; i++) {
-            final int index = i;
-            mService.foodCalori(inputFoods.get(i))
-            .enqueue(new Callback<APIResponse>() {
-                @Override
-                public void onResponse(Call<APIResponse> call, Response<APIResponse> response) {
-                    APIResponse result = response.body();
-                    if (result.isError()) {
-                        Toast.makeText(FoodCaloriActivity.this, result.getError_msg(), Toast.LENGTH_SHORT).show();
-                    } else if (!result.isError()) {
-                        sum += result.getFood_calori();
 
-                        if (index == arrSize - 1) {
-                            txtResult.setText(String.valueOf(sum) + " Kkal");
-                            cardResult.setVisibility(View.VISIBLE);
-                            cardResult.startAnimation(fade);
-
-                            sum = 0;
-                        }
-                    }
-                }
-
-                @Override
-                public void onFailure(Call<APIResponse> call, Throwable t) {
-                    Toast.makeText(FoodCaloriActivity.this, t.getMessage(), Toast.LENGTH_SHORT).show();
-                }
-            });
-        }
     }
 
     private void reset() {
         inputFoods.clear();
-        txtMakanan1.setText("");
+        txtFoodFirst.setText("");
 
         int childCount = container.getChildCount();
         for (int i = 0; i < childCount; i++) {
@@ -189,11 +152,11 @@ public class FoodCaloriActivity extends AppCompatActivity {
         txtResult.setText("");
         cardResult.setVisibility(View.GONE);
 
-        if(sdk < android.os.Build.VERSION_CODES.JELLY_BEAN) {
-            btnHitung.setBackgroundDrawable(ContextCompat.getDrawable(getApplicationContext(), R.drawable.bgbtngradient));
+        if (sdk < android.os.Build.VERSION_CODES.JELLY_BEAN) {
+            btnCalculate.setBackgroundDrawable(ContextCompat.getDrawable(getApplicationContext(), R.drawable.bgbtngradient));
             btnAdd.setBackgroundDrawable(ContextCompat.getDrawable(getApplicationContext(), R.drawable.bgbtncircle));
         } else {
-            btnHitung.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.bgbtngradient));
+            btnCalculate.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.bgbtngradient));
             btnAdd.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.bgbtncircle));
         }
 

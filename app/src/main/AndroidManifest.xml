@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.hp.justhealth">
+    package="com.example.hp.gotohealth">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -18,25 +18,25 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".SigninActivity"
+            android:name="com.example.hp.gotohealth.SigninActivity"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SignupActivity" />
+        <activity android:name="com.example.hp.gotohealth.SignupActivity" />
         <!-- The main/home activity (it has no parent activity) -->
-        <activity android:name=".DashboardActivity" />
+        <activity android:name="com.example.hp.gotohealth.DashboardActivity" />
         <!-- A child of the main activity -->
-        <activity android:name=".CheckBBActivity" />
-        <activity android:name=".CaloriActivity" />
-        <activity android:name=".DayCaloriActivity" />
-        <activity android:name=".SettingsActivity" />
-        <activity android:name=".ProfilActivity" />
-        <activity android:name=".FAQsActivity" />
-        <activity android:name=".FoodCaloriActivity" />
-        <activity android:name=".HeartRateActivity" />
+        <activity android:name="com.example.hp.gotohealth.CalculateIBMActivity" />
+        <activity android:name="com.example.hp.gotohealth.CalorieActivity" />
+        <activity android:name="com.example.hp.gotohealth.DayCalorieActivity" />
+        <activity android:name="com.example.hp.gotohealth.SettingsActivity" />
+        <activity android:name="com.example.hp.gotohealth.ProfileActivity" />
+        <activity android:name="com.example.hp.gotohealth.FAQsActivity" />
+        <activity android:name="com.example.hp.gotohealth.FoodCalorieActivity" />
+        <activity android:name="com.example.hp.gotohealth.HeartRateActivity" />
     </application>
 
 </manifest>

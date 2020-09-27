@@ -9,52 +9,52 @@
     tools:context=".DashboardActivity">
 
     <LinearLayout
-        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
         <android.support.v7.widget.Toolbar
             android:id="@+id/dashboard_toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorPrimary"
-            app:titleTextColor="#fff"
             android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
-            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:titleTextColor="#fff" />
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
             android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
             android:layout_marginRight="20dp">
 
             <TextView
                 android:id="@+id/textname"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="22sp"
-                android:textColor="#000"/>
+                android:textColor="#000"
+                android:textSize="22sp" />
 
             <TextView
                 android:id="@+id/textemail"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="16sp"
-                android:textColor="#000"
+                android:layout_below="@id/textname"
                 android:maxLines="2"
-                android:layout_below="@id/textname"/>
+                android:textColor="#000"
+                android:textSize="16sp" />
 
             <Button
                 android:id="@+id/btnlogout"
                 android:layout_width="wrap_content"
                 android:layout_height="22dp"
-                android:text="@string/txt_btn_keluar"
-                android:textSize="14sp"
-                android:textColor="#fff"
-                android:background="@color/colorPrimaryDark"
                 android:layout_below="@id/textemail"
-                android:layout_marginTop="8dp"/>
+                android:layout_marginTop="8dp"
+                android:background="@color/colorPrimaryDark"
+                android:text="@string/txt_btn_keluar"
+                android:textColor="#fff"
+                android:textSize="14sp" />
 
         </RelativeLayout>
 
@@ -62,12 +62,12 @@
             android:id="@+id/cardberatbadan"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
             android:layout_marginLeft="12dp"
+            android:layout_marginTop="30dp"
             android:layout_marginRight="12dp"
             android:clickable="true"
-            app:cardBackgroundColor="#6c5ce7"
-            android:foreground="?android:attr/selectableItemBackground">
+            android:foreground="?android:attr/selectableItemBackground"
+            app:cardBackgroundColor="#6c5ce7">
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -78,16 +78,16 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/danger"/>
+                    android:src="@drawable/danger" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:text="@string/menu_dashboard1"
-                    android:textSize="20sp"
-                    android:textColor="#fff"
+                    android:layout_marginLeft="15dp"
                     android:gravity="center_vertical"
-                    android:layout_marginLeft="15dp"/>
+                    android:text="@string/menu_dashboard1"
+                    android:textColor="#fff"
+                    android:textSize="20sp" />
 
             </LinearLayout>
 
@@ -97,12 +97,12 @@
             android:id="@+id/cardkalori"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
             android:layout_marginLeft="12dp"
+            android:layout_marginTop="5dp"
             android:layout_marginRight="12dp"
             android:clickable="true"
-            app:cardBackgroundColor="#00b894"
-            android:foreground="?android:attr/selectableItemBackground">
+            android:foreground="?android:attr/selectableItemBackground"
+            app:cardBackgroundColor="#00b894">
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -113,17 +113,16 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/chart"
-                    />
+                    android:src="@drawable/chart" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:text="@string/menu_dashboard2"
-                    android:textSize="20sp"
-                    android:textColor="#fff"
+                    android:layout_marginLeft="15dp"
                     android:gravity="center_vertical"
-                    android:layout_marginLeft="15dp"/>
+                    android:text="@string/menu_dashboard2"
+                    android:textColor="#fff"
+                    android:textSize="20sp" />
 
             </LinearLayout>
 
@@ -133,12 +132,12 @@
             android:id="@+id/cardheartrate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
             android:layout_marginLeft="12dp"
+            android:layout_marginTop="5dp"
             android:layout_marginRight="12dp"
             android:clickable="true"
-            app:cardBackgroundColor="#fdcb6e"
-            android:foreground="?android:attr/selectableItemBackground">
+            android:foreground="?android:attr/selectableItemBackground"
+            app:cardBackgroundColor="#fdcb6e">
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -149,17 +148,16 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/lamp"
-                    />
+                    android:src="@drawable/lamp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:text="@string/menu_dashboard3"
-                    android:textSize="20sp"
-                    android:textColor="#fff"
+                    android:layout_marginLeft="15dp"
                     android:gravity="center_vertical"
-                    android:layout_marginLeft="15dp"/>
+                    android:text="@string/menu_dashboard3"
+                    android:textColor="#fff"
+                    android:textSize="20sp" />
 
             </LinearLayout>
 
@@ -169,13 +167,13 @@
             android:id="@+id/cardsettings"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
             android:layout_marginLeft="12dp"
+            android:layout_marginTop="5dp"
             android:layout_marginRight="12dp"
             android:layout_marginBottom="30dp"
             android:clickable="true"
-            app:cardBackgroundColor="#636e72"
-            android:foreground="?android:attr/selectableItemBackground">
+            android:foreground="?android:attr/selectableItemBackground"
+            app:cardBackgroundColor="#636e72">
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -186,17 +184,16 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/settings"
-                    />
+                    android:src="@drawable/settings" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:text="@string/menu_dashboard4"
-                    android:textSize="20sp"
-                    android:textColor="#fff"
+                    android:layout_marginLeft="15dp"
                     android:gravity="center_vertical"
-                    android:layout_marginLeft="15dp"/>
+                    android:text="@string/menu_dashboard4"
+                    android:textColor="#fff"
+                    android:textSize="20sp" />
 
             </LinearLayout>
 

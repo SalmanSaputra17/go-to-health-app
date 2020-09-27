@@ -4,9 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fillViewport="true"
     android:background="#fff"
-    tools:context=".DayCaloriActivity">
+    android:fillViewport="true"
+    tools:context=".DayCalorieActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -17,82 +17,82 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorPrimary"
-            app:titleTextColor="#fff"
             android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
-            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:titleTextColor="#fff" />
 
         <EditText
             android:id="@+id/textberatbadankalori1"
             android:layout_width="match_parent"
             android:layout_height="@dimen/height_input"
-            android:padding="@dimen/padding_input"
-            android:hint="@string/txt_berat_badan"
-            android:textColorHint="#6b6b6b"
-            android:textColor="#6b6b6b"
-            android:inputType="numberDecimal"
-            android:background="@drawable/bginput"
-            android:layout_marginTop="20dp"
+            android:layout_below="@id/day_calori_toolbar"
             android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
             android:layout_marginRight="20dp"
-            android:layout_below="@id/day_calori_toolbar"/>
+            android:background="@drawable/bginput"
+            android:hint="@string/txt_berat_badan"
+            android:inputType="numberDecimal"
+            android:padding="@dimen/padding_input"
+            android:textColor="#6b6b6b"
+            android:textColorHint="#6b6b6b" />
 
         <EditText
             android:id="@+id/texttinggibadankalori1"
             android:layout_width="match_parent"
             android:layout_height="@dimen/height_input"
-            android:padding="@dimen/padding_input"
-            android:hint="@string/txt_tinggi_badan"
-            android:textColorHint="#6b6b6b"
-            android:textColor="#6b6b6b"
-            android:inputType="numberDecimal"
-            android:background="@drawable/bginput"
-            android:layout_marginTop="8dp"
+            android:layout_below="@id/textberatbadankalori1"
             android:layout_marginLeft="20dp"
+            android:layout_marginTop="8dp"
             android:layout_marginRight="20dp"
-            android:layout_below="@id/textberatbadankalori1"/>
+            android:background="@drawable/bginput"
+            android:hint="@string/txt_tinggi_badan"
+            android:inputType="numberDecimal"
+            android:padding="@dimen/padding_input"
+            android:textColor="#6b6b6b"
+            android:textColorHint="#6b6b6b" />
 
         <Spinner
             android:id="@+id/spinnerkegiatan"
             android:layout_width="match_parent"
             android:layout_height="@dimen/height_input"
-            android:background="@drawable/style_spinner"
-            android:layout_marginTop="8dp"
+            android:layout_below="@id/texttinggibadankalori1"
             android:layout_marginLeft="20dp"
+            android:layout_marginTop="8dp"
             android:layout_marginRight="20dp"
-            android:layout_below="@id/texttinggibadankalori1"/>
+            android:background="@drawable/style_spinner" />
 
         <LinearLayout
             android:id="@+id/btngroup"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:weightSum="2"
-            android:orientation="horizontal"
+            android:layout_below="@id/spinnerkegiatan"
             android:layout_margin="20dp"
             android:gravity="center_vertical"
-            android:layout_below="@id/spinnerkegiatan">
+            android:orientation="horizontal"
+            android:weightSum="2">
 
             <Button
                 android:id="@+id/btnhitungkalori1"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:background="@drawable/bgbtngradient"
                 android:text="@string/txt_btn_hitung"
-                android:textColor="#fff"
-                android:textSize="18sp"
                 android:textAllCaps="false"
-                android:background="@drawable/bgbtngradient"/>
+                android:textColor="#fff"
+                android:textSize="18sp" />
 
             <Button
                 android:id="@+id/btnresetdaykalori"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/txt_btn_reset"
-                android:textColor="#000"
-                android:textSize="18sp"
-                android:textAllCaps="false"
                 android:layout_marginLeft="5dp"
-                android:background="@drawable/bgbtnwhite"/>
+                android:layout_weight="1"
+                android:background="@drawable/bgbtnwhite"
+                android:text="@string/txt_btn_reset"
+                android:textAllCaps="false"
+                android:textColor="#000"
+                android:textSize="18sp" />
 
         </LinearLayout>
 
@@ -100,11 +100,11 @@
             android:id="@+id/cardresultkalori1"
             android:layout_width="match_parent"
             android:layout_height="200dp"
+            android:layout_below="@id/btngroup"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:layout_marginBottom="20dp"
-            app:cardCornerRadius="8dp"
-            android:layout_below="@id/btngroup">
+            app:cardCornerRadius="8dp">
 
             <LinearLayout
                 android:layout_width="match_parent"

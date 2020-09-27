@@ -11,8 +11,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
         android:divider="@drawable/separator"
+        android:orientation="vertical"
         android:showDividers="middle">
 
         <android.support.v7.widget.Toolbar
@@ -20,9 +20,9 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorPrimary"
-            app:titleTextColor="#fff"
             android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
-            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:titleTextColor="#fff" />
 
         <com.borjabravo.readmoretextview.ReadMoreTextView
             android:id="@+id/faq1"
@@ -32,11 +32,11 @@
             android:text="@string/faq1"
             android:textColor="#000"
             android:textSize="16sp"
-            app:trimExpandedText="Show More"
+            app:colorClickableText="@color/colorPrimaryDark"
             app:trimCollapsedText="Show Less"
-            app:trimMode="trimModeLength"
+            app:trimExpandedText="Show More"
             app:trimLength="48"
-            app:colorClickableText="@color/colorPrimaryDark"/>
+            app:trimMode="trimModeLength" />
 
         <com.borjabravo.readmoretextview.ReadMoreTextView
             android:id="@+id/faq2"
@@ -46,11 +46,11 @@
             android:text="@string/faq2"
             android:textColor="#000"
             android:textSize="16sp"
-            app:trimExpandedText="Show More"
+            app:colorClickableText="@color/colorPrimaryDark"
             app:trimCollapsedText="Show Less"
-            app:trimMode="trimModeLength"
+            app:trimExpandedText="Show More"
             app:trimLength="64"
-            app:colorClickableText="@color/colorPrimaryDark"/>
+            app:trimMode="trimModeLength" />
 
     </LinearLayout>
 

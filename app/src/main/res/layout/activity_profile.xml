@@ -5,14 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true"
-    tools:context=".ProfilActivity">
+    tools:context=".ProfileActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:gravity="center_horizontal"
         android:divider="@drawable/separator"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
         android:showDividers="middle">
 
         <android.support.v7.widget.Toolbar
@@ -20,59 +20,59 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorPrimary"
-            app:titleTextColor="#fff"
             android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
-            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:titleTextColor="#fff" />
 
         <TextView
             android:id="@+id/usernametext"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="#fff"
             android:padding="15dp"
             android:text=""
             android:textColor="#000"
-            android:textSize="16sp"
-            android:background="#fff"/>
+            android:textSize="16sp" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/profil_meta_data"
-            android:textSize="14sp"
-            android:textColor="#b4000000"
-            android:paddingTop="8dp"
             android:paddingLeft="15dp"
-            android:paddingBottom="8dp"/>
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:text="@string/profil_meta_data"
+            android:textColor="#b4000000"
+            android:textSize="14sp" />
 
         <TextView
             android:id="@+id/emailtext"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="#fff"
+            android:padding="15dp"
             android:text=""
             android:textColor="#000"
-            android:textSize="16sp"
-            android:padding="15dp"
-            android:background="#fff"/>
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/jktext"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="#fff"
+            android:padding="15dp"
             android:text=""
             android:textColor="#000"
-            android:textSize="16sp"
-            android:padding="15dp"
-            android:background="#fff"/>
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/tgllahirtext"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="#fff"
+            android:padding="15dp"
             android:text=""
             android:textColor="#000"
-            android:textSize="16sp"
-            android:padding="15dp"
-            android:background="#fff"/>
+            android:textSize="16sp" />
 
     </LinearLayout>
 
